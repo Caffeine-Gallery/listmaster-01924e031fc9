@@ -55,13 +55,18 @@ h1 {
 
 #shopping-list li {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     padding: 10px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     margin-bottom: 5px;
     border-radius: 4px;
+}
+
+#shopping-list li > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #shopping-list li span {
@@ -74,7 +79,14 @@ h1 {
     color: #888;
 }
 
-.toggle-btn, .delete-btn {
+.note {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.toggle-btn, .add-note-btn, .delete-btn {
     background: none;
     border: none;
     cursor: pointer;
@@ -91,10 +103,14 @@ h1 {
     color: #888;
 }
 
+.add-note-btn {
+    color: #2196F3;
+}
+
 .delete-btn {
     color: #f44336;
 }
 
-.toggle-btn:hover, .delete-btn:hover {
+.toggle-btn:hover, .add-note-btn:hover, .delete-btn:hover {
     opacity: 0.7;
 }

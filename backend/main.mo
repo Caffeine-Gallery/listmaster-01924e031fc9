@@ -16,6 +16,7 @@ actor ShoppingList {
     id: Nat;
     text: Text;
     completed: Bool;
+    note: Text;
   };
 
   // Stable variable to store the items
@@ -42,6 +43,7 @@ actor ShoppingList {
       id = id;
       text = text;
       completed = false;
+      note = "";
     };
     items.put(id, newItem);
     id
@@ -61,6 +63,7 @@ actor ShoppingList {
           id = item.id;
           text = item.text;
           completed = completed;
+          note = item.note;
         };
         items.put(id, updatedItem);
         true
@@ -73,6 +76,23 @@ actor ShoppingList {
     switch (items.remove(id)) {
       case (null) { false };
       case (?_) { true };
+    }
+  };
+
+  // New function to add a note to an item
+  public func addNoteToItem(id : Nat, note : Text) : async Bool {
+    switch (items.get(id)) {
+      case (null) { false };
+      case (?item) {
+        let updatedItem : Item = {
+          id = item.id;
+          text = item.text;
+          completed = item.completed;
+          note = note;
+        };
+        items.put(id, updatedItem);
+        true
+      };
     }
   };
 

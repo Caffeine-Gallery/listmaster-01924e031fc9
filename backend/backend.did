@@ -2,10 +2,12 @@ type Item =
  record {
    completed: bool;
    id: nat;
+   note: text;
    "text": text;
  };
 service : {
   addItem: (text) -> (nat);
+  addNoteToItem: (nat, text) -> (bool);
   deleteItem: (nat) -> (bool);
   getItems: () -> (vec Item) query;
   updateItem: (nat, bool) -> (bool);
