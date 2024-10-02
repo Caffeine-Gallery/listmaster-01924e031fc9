@@ -3,21 +3,21 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ffebee;
 }
 
 .container {
     max-width: 600px;
     margin: 30px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #b71c1c;
 }
 
 #add-item-form {
@@ -29,14 +29,14 @@ h1 {
     flex-grow: 1;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ddd;
+    border: 1px solid #ffcdd2;
     border-radius: 4px 0 0 4px;
 }
 
 #add-item-form button {
     padding: 10px 15px;
     font-size: 16px;
-    background-color: #4CAF50;
+    background-color: #d32f2f;
     color: white;
     border: none;
     border-radius: 0 4px 4px 0;
@@ -45,7 +45,7 @@ h1 {
 }
 
 #add-item-form button:hover {
-    background-color: #45a049;
+    background-color: #b71c1c;
 }
 
 #shopping-list {
@@ -57,8 +57,8 @@ h1 {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: #ffcdd2;
+    border: 1px solid #ef9a9a;
     margin-bottom: 5px;
     border-radius: 4px;
 }
@@ -72,16 +72,17 @@ h1 {
 #shopping-list li span {
     flex-grow: 1;
     margin-right: 10px;
+    color: #b71c1c;
 }
 
 #shopping-list li span.completed {
     text-decoration: line-through;
-    color: #888;
+    color: #e57373;
 }
 
 .note {
     font-size: 0.9em;
-    color: #666;
+    color: #c62828;
     margin-top: 5px;
     font-style: italic;
 }
@@ -96,19 +97,19 @@ h1 {
 }
 
 .toggle-btn {
-    color: #4CAF50;
+    color: #d32f2f;
 }
 
 .toggle-btn.completed {
-    color: #888;
+    color: #ef9a9a;
 }
 
 .add-note-btn {
-    color: #2196F3;
+    color: #c62828;
 }
 
 .delete-btn {
-    color: #f44336;
+    color: #b71c1c;
 }
 
 .toggle-btn:hover, .add-note-btn:hover, .delete-btn:hover {
